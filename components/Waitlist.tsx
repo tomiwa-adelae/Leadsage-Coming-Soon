@@ -4,7 +4,7 @@ import { ShowcaseForm } from "./forms/ShowcaseForm";
 
 const Waitlist = () => {
 	return (
-		<div className="bg-white py-16">
+		<div className="bg-white py-16" id="waitlist">
 			<div className="container">
 				<div>
 					<h2 className="font-medium text-primary uppercase text-3xl md:text-4xl">

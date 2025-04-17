@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/ui/Header";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
 	title: "Leadsage - Coming soon",
@@ -25,6 +26,7 @@ export default function RootLayout({
 				<Header />
 				{children}
 				<Footer />
+				<Toaster />
 			</body>
 		</html>
 	);

@@ -17,7 +17,7 @@ const How = () => {
 				</div>
 				<div className="grid grid-col-1 md:grid-cols-2 mt-8 gap-x-8 gap-y-10">
 					{how.map(({ image, title, description }, index) => (
-						<div className="relative">
+						<div key={index} className="relative">
 							<Image
 								src={image}
 								alt={`${title}'s picture`}

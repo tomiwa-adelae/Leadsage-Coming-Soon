@@ -16,7 +16,7 @@ const Header = () => {
 				<Link href={"/"}>Leadsage</Link>
 			</h3>
 			<Button asChild size={"lg"}>
-				<Link href="#subscribe">Subscribe</Link>
+				<Link href="#waitlist">Subscribe</Link>
 			</Button>
 		</header>
 	);

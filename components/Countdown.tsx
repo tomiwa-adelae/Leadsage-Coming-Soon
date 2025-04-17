@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import CountdownBox from "./CountdownBox";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { ShowcaseForm } from "./forms/ShowcaseForm";
 
 const Countdown = () => {
-	const launchDate = new Date("May 16, 2025, 11:00:00").getTime();
+	const launchDate = new Date("July 16, 2025, 11:00:00").getTime();
 
 	const [days, setDays] = useState<any>(0);
 	const [hours, setHours] = useState<any>(0);
@@ -64,7 +67,7 @@ const Countdown = () => {
 	}, [launchDate]);
 
 	return (
-		<div className="container relative">
+		<div className="min-h-[70vh] relative py-16">
 			<video
 				autoPlay
 				loop
@@ -74,27 +77,38 @@ const Countdown = () => {
 			>
 				<source
 					src={
-						"https://res.cloudinary.com/dh0rc6p1c/video/upload/v1744904609/leadsage/videos/3326783-hd_1920_1080_24fps_evwpz0.mp4"
+						"https://res.cloudinary.com/dh0rc6p1c/video/upload/v1744907189/leadsage/videos/856661-hd_1920_1080_25fps_t2v6ti.mp4"
 					}
 					type="video/mp4"
 				/>
 			</video>
-			<div>
-				<h2 className="font-medium text-primary uppercase text-3xl md:text-4xl">
-					Launching Soon
-				</h2>
-				<p className="text-base text-muted-foreground mt-1.5">
-					We're putting the final touches on something amazing.
-					Leadsage is almost here. Stay ready!
-				</p>
+			<div className="grid container text-white z-50 text-center">
+				<div className="z-50">
+					<div>
+						<h2 className="font-medium uppercase text-3xl md:text-4xl">
+							Launching Soon
+						</h2>
+						<p className="text-base mt-1.5">
+							We're putting the final touches on something
+							amazing. Leadsage is almost here. Stay ready!
+						</p>
+					</div>
+					<div className="grid grid-cols-4 gap-4 md:gap-10 mt-8 mb-20">
+						<CountdownBox value={days} label="Days" />
+						<CountdownBox value={hours} label="Hours" />
+						<CountdownBox value={minutes} label="Minutes" />
+						<CountdownBox value={seconds} label="Seconds" />
+					</div>
+					<div className="mx-auto md:max-w-2xl">
+						<ShowcaseForm
+							bg={
+								"bg-clip-padding backdrop-filter bg-opacity-30 bg-primary/30 backdrop-blur-xs shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] text-white"
+							}
+						/>
+					</div>
+				</div>
 			</div>
-			<div className="grid grid-cols-4 gap-4 mt-8">
-				<CountdownBox value={"02"} label={"Days"} />
-				<CountdownBox value={"02"} label={"Hours"} />
-				<CountdownBox value={"02"} label={"Minutes"} />
-				<CountdownBox value={"02"} label={"Seconds"} />
-			</div>
-			<div className="absolute inset-0 bg-blue/40" />
+			<div className="absolute inset-0 bg-black/40" />
 		</div>
 	);
 };
