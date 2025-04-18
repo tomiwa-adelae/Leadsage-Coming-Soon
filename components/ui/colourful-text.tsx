@@ -29,26 +29,65 @@ export function ColourfulText({ text }: { text: string }) {
 		return () => clearInterval(interval);
 	}, []);
 
-	return text.split("").map((char, index) => (
-		<motion.span
-			key={`${char}-${count}-${index}`}
-			initial={{
-				y: 0,
-			}}
-			animate={{
-				color: currentColors[index % currentColors.length],
-				y: [0, -3, 0],
-				scale: [1, 1.01, 1],
-				filter: ["blur(0px)", `blur(5px)`, "blur(0px)"],
-				opacity: [1, 0.8, 1],
-			}}
-			transition={{
-				duration: 0.5,
-				delay: index * 0.05,
-			}}
-			className="inline-block whitespace-pre tracking-tight"
-		>
-			{char}
-		</motion.span>
-	));
+	// Split by word but keep spaces
+	const words = text.split(/(\s+)/);
+
+	let globalIndex = 0;
+
+	return (
+		<div className="inline">
+			{words.map((word, wordIdx) => {
+				if (word.trim() === "") {
+					// If it's a space, render it as a regular space
+					return (
+						<span
+							key={`space-${wordIdx}`}
+							className="inline-block w-[0.5ch]"
+						/>
+					);
+				}
+
+				return (
+					<span
+						key={`word-${wordIdx}`}
+						className="whitespace-nowrap inline-block"
+					>
+						{word.split("").map((char, i) => {
+							const color =
+								currentColors[
+									globalIndex % currentColors.length
+								];
+							const charIndex = globalIndex;
+							globalIndex++;
+
+							return (
+								<motion.span
+									key={`${char}-${count}-${charIndex}`}
+									initial={{ y: 0 }}
+									animate={{
+										color,
+										y: [0, -3, 0],
+										scale: [1, 1.01, 1],
+										filter: [
+											"blur(0px)",
+											`blur(5px)`,
+											"blur(0px)",
+										],
+										opacity: [1, 0.8, 1],
+									}}
+									transition={{
+										duration: 0.5,
+										delay: charIndex * 0.05,
+									}}
+									className="inline-block tracking-tight"
+								>
+									{char}
+								</motion.span>
+							);
+						})}
+					</span>
+				);
+			})}
+		</div>
+	);
 }
