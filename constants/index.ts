@@ -31,14 +31,14 @@ export const why = [
 
 export const how = [
 	{
-		image: "/assets/images/join-us.webp",
+		image: "/assets/images/join.png",
 		title: "Sign Up & Get Verified",
 		description:
 			"Create an account in minutes and verify your profile. Trust and safety come first.",
 		number: "01",
 	},
 	{
-		image: "/assets/images/list.webp",
+		image: "/assets/images/list.png",
 		title: "List or Book",
 		description:
 			"Landlords can list properties in a few steps. Renters can search, browse, and book instantly.",

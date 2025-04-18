@@ -16,7 +16,7 @@ const How = () => {
 					</p>
 				</div>
 				<div className="grid grid-col-1 md:grid-cols-2 mt-8 gap-x-8 gap-y-10">
-					{how.map(({ image, title, description }, index) => (
+					{how.map(({ image, title, description, number }, index) => (
 						<div key={index} className="relative">
 							<Image
 								src={image}
@@ -34,7 +34,9 @@ const How = () => {
 								</p>
 							</div>
 							<div className="bg-blue-400 rounded-full h-10 w-10 inline-flex items-center justify-center absolute top-[-18px] left-[-15px]">
-								<h5 className="text-xl font-semibold">01</h5>
+								<h5 className="text-xl font-semibold">
+									{number}
+								</h5>
 							</div>
 						</div>
 					))}
