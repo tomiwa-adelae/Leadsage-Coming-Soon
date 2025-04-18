@@ -1,11 +1,9 @@
 import Countdown from "@/components/Countdown";
 import { ShowcaseForm } from "@/components/forms/ShowcaseForm";
 import How from "@/components/How";
-import dynamic from "next/dynamic";
-
-const Showcase = dynamic(() => import("@/components/Showcase"), { ssr: false });
-
+import Showcase from "@/components/Showcase";
 import { ColourfulText } from "@/components/ui/colourful-text";
+import { Separator } from "@/components/ui/separator";
 import Waitlist from "@/components/Waitlist";
 import Why from "@/components/Why";
 
@@ -23,6 +21,9 @@ const page = () => {
 				}
 				details={<ShowcaseForm />}
 			/>
+			<div className="container mb-16">
+				<Separator />
+			</div>
 			<Why />
 			<How />
 			<Waitlist />
