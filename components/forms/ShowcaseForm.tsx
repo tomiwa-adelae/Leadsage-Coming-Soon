@@ -48,7 +48,10 @@ export function ShowcaseForm({ bg = "bg-white text-black" }: { bg?: string }) {
 		>
 			<div className="relative">
 				<Input
-					className="border-none bg-transparent"
+					className={`${
+						bg === "bg-white text-black" &&
+						"placeholder:text-muted-foreground"
+					} border-none bg-transparent`}
 					type="email"
 					placeholder="Email"
 					value={email}
