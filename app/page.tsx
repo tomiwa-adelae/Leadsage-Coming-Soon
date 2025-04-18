@@ -1,7 +1,10 @@
 import Countdown from "@/components/Countdown";
 import { ShowcaseForm } from "@/components/forms/ShowcaseForm";
 import How from "@/components/How";
-import Showcase from "@/components/Showcase";
+import dynamic from "next/dynamic";
+
+const Showcase = dynamic(() => import("@/components/Showcase"), { ssr: false });
+
 import { ColourfulText } from "@/components/ui/colourful-text";
 import Waitlist from "@/components/Waitlist";
 import Why from "@/components/Why";
