@@ -22,7 +22,7 @@ export const register = async (email: string) => {
 
 		const userExist = await Waitlist.findOne({ email });
 
-		if (!userExist)
+		if (userExist)
 			return {
 				status: 400,
 				message: "Oops! You have already registered.",
@@ -35,7 +35,6 @@ export const register = async (email: string) => {
 				status: 400,
 				message: "Oops! User with that email is not found.",
 			};
-		console.log(user);
 
 		// **Send Confirmation Email to Student**
 		await mailjet.post("send", { version: "v3.1" }).request({
@@ -61,6 +60,7 @@ export const register = async (email: string) => {
 		return {
 			status: 200,
 			user: JSON.parse(JSON.stringify(user)),
+			message: "You're officially on the waitlist!",
 		};
 	} catch (error) {
 		console.log(error);

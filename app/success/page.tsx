@@ -7,11 +7,9 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export const metadata: Metadata = {
-	title: "Registration Successful | Innovation 4.0",
+	title: "Registration Successful | Leadsage",
 	description:
-		"Congratulations! Your spot at Innovation 4.0 is secured. Get ready for an unforgettable experience in innovation, leadership, and business growth.",
-	keywords:
-		"registration complete, success page, event confirmation, innovation summit, john ogunjide, tomiwa, tomiwa adelae, innovation 3.0, innovation 4.0, innovation conference, conferences, conference, cornerstone international foundation, foundation, bill gate foundations, alternative to gates foundations, gates foundations, ACU, Ajayi Crowther University",
+		"Congratulations! Your spot at Leadsage is secured. Get ready for an unforgettable experience for renting, buying an leasing properties",
 };
 
 interface SearchParamsProps {
@@ -39,11 +37,11 @@ const page = async ({ searchParams }: SearchParamsProps) => {
 					</>
 				}
 				description={
-					"Congratulations! Thanks for joining Leadsage. You're now part of the exclusive group that will get first access when we go live"
+					"Congratulations! Thanks for joining Leadsage. You're now part of the exclusive group that will get first access when we go live."
 				}
 				details={
 					<div>
-						<Button asChild>
+						<Button size={"lg"} asChild>
 							<Link href="/">Return to homepage</Link>
 						</Button>
 					</div>
