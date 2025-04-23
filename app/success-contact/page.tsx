@@ -6,12 +6,11 @@ import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Contact from "@/components/Contact";
-
+import { email } from "@/constants";
 export const metadata: Metadata = {
-	title: "Registration Successful | Leadsage",
+	title: "Message Received | Leadsage",
 	description:
-		"Congratulations! Your spot at Leadsage is secured. Get ready for an unforgettable experience for renting, buying an leasing properties",
+		"Thank you for reaching out! Our team will get back to you soon. Stay tuned for updates on Leadsage",
 };
 
 interface SearchParamsProps {
@@ -34,12 +33,20 @@ const page = async ({ searchParams }: SearchParamsProps) => {
 			<Showcase
 				headline={
 					<>
-						You're officially on the{" "}
-						<ColourfulText text="waitlist!" />
+						Message <ColourfulText text="Received!" />
 					</>
 				}
 				description={
-					"Congratulations! Thanks for joining Leadsage. You're now part of the exclusive group that will get first access when we go live."
+					<>
+						Thank you for reaching out to us! Your message has been
+						successfully submitted, and our team will get back to
+						you as soon as possible. If your inquiry is urgent, feel
+						free to contact us directly at{" "}
+						<a className="hover:underline" href={`mailto:${email}`}>
+							{email}
+						</a>
+						.
+					</>
 				}
 				details={
 					<div>
@@ -49,7 +56,6 @@ const page = async ({ searchParams }: SearchParamsProps) => {
 					</div>
 				}
 			/>
-			<Contact />
 		</div>
 	);
 };

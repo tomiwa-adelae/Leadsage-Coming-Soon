@@ -4,15 +4,15 @@ import React from "react";
 
 const How = () => {
 	return (
-		<div className="bg-[#204B41] text-white py-16">
+		<div id={"how"} className="bg-[#204B41] text-white py-16">
 			<div className="container">
 				<div>
-					<h2 className="font-medium uppercase text-3xl md:text-4xl">
+					<h2 className="font-semibold uppercase text-3xl md:text-4xl">
 						How Leadsage Works
 					</h2>
 					<p className="text-base text-gray-100 mt-1.5">
-						Whether you're looking for a space or listing one, it's
-						as easy as 1-2-3.
+						Our platform makes finding and listing property simple
+						and efficient.
 					</p>
 				</div>
 				<div className="grid grid-col-1 md:grid-cols-2 mt-8 gap-x-8 gap-y-10">

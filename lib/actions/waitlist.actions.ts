@@ -10,17 +10,27 @@ const mailjet = Mailjet.apiConnect(
 	process.env.MAILJET_API_PRIVATE_KEY!
 );
 
-export const register = async (email: string) => {
+export const register = async (details: {
+	name: string;
+	email: string;
+	phoneNumber: string;
+	identity: string;
+}) => {
 	try {
 		await connectToDatabase();
 
-		if (!email)
+		if (
+			!details.email ||
+			!details.name ||
+			!details.phoneNumber ||
+			!details.identity
+		)
 			return {
 				status: 400,
-				message: "Oops! Your email is required.",
+				message: "Oops! Please enter all fields.",
 			};
 
-		const userExist = await Waitlist.findOne({ email });
+		const userExist = await Waitlist.findOne({ email: details.email });
 
 		if (userExist)
 			return {
@@ -28,7 +38,7 @@ export const register = async (email: string) => {
 				message: "Oops! You have already registered.",
 			};
 
-		const user = await Waitlist.create({ email });
+		const user = await Waitlist.create(details);
 
 		if (!user)
 			return {
@@ -52,7 +62,7 @@ export const register = async (email: string) => {
 					],
 					Subject: `You’re officially on the Leadsage waitlist! `,
 					TextPart: `You’re officially on the Leadsage waitlist! `,
-					HTMLPart: emailTemplate(),
+					HTMLPart: emailTemplate(user.name),
 				},
 			],
 		});
@@ -62,8 +72,11 @@ export const register = async (email: string) => {
 			user: JSON.parse(JSON.stringify(user)),
 			message: "You're officially on the waitlist!",
 		};
-	} catch (error) {
-		console.log(error);
+	} catch (error: any) {
+		return {
+			status: error?.status || 400,
+			message: error?.message || "Oops! User not found! Try again later.",
+		};
 	}
 };
 

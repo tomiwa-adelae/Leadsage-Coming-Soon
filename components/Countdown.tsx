@@ -5,6 +5,7 @@ import CountdownBox from "./CountdownBox";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { ShowcaseForm } from "./forms/ShowcaseForm";
+import { Mail } from "lucide-react";
 
 const Countdown = () => {
 	const launchDate = new Date("July 16, 2025, 11:00:00").getTime();
@@ -100,11 +101,11 @@ const Countdown = () => {
 						<CountdownBox value={seconds} label="Seconds" />
 					</div>
 					<div className="mx-auto md:max-w-2xl">
-						<ShowcaseForm
-							bg={
-								"bg-clip-padding backdrop-filter bg-opacity-30 bg-primary/30 backdrop-blur-xs shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] text-white"
-							}
-						/>
+						<Button size={"lg"} asChild>
+							<Link href="#waitlist">
+								<Mail /> Join waitlist now
+							</Link>
+						</Button>
 					</div>
 				</div>
 			</div>

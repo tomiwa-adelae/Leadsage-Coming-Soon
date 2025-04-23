@@ -1,23 +1,41 @@
-import { Inknut_Antiqua } from "next/font/google";
 import Link from "next/link";
 import { Button } from "./button";
-
-const inknut = Inknut_Antiqua({
-	subsets: ["latin"],
-	weight: ["300", "400", "500"],
-});
+import Image from "next/image";
+import { navLinks } from "@/constants";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
 	return (
 		<header className="container py-4 flex items-center justify-between gap-4">
-			<h3
-				className={`uppercase font-semibold text-2xl lg:text-3xl text-primary hover:text-primary/90 transition ease-out ${inknut.className}`}
-			>
-				<Link href={"/"}>Leadsage</Link>
-			</h3>
-			<Button asChild size={"lg"}>
-				<Link href="#waitlist">Subscribe</Link>
-			</Button>
+			<Link href={"/"}>
+				<Image
+					src={"/assets/images/logo.png"}
+					alt={"Leadsage Logo"}
+					width={1000}
+					height={1000}
+					className="w-28 h-28"
+				/>
+			</Link>
+			<div className="flex-1 md:flex items-center justify-end gap-6">
+				<nav className="flex items-center justify-end gap-6">
+					{navLinks.map((link, index) => {
+						return (
+							<Link
+								key={index}
+								className={cn(
+									"uppercase text-xs lg:text-sm font-medium text-white"
+								)}
+								href={link.slug}
+							>
+								{link.label}
+							</Link>
+						);
+					})}
+				</nav>
+				<Button asChild size={"lg"}>
+					<Link href="#waitlist">Join</Link>
+				</Button>
+			</div>
 		</header>
 	);
 };

@@ -125,3 +125,11 @@
 	margin-inline: auto;
 	width: 93%;
 }
+
+.PhoneInput input {
+	outline: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}

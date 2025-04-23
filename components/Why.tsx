@@ -4,10 +4,10 @@ import React from "react";
 
 const Why = () => {
 	return (
-		<div className="pb-16 md:pt-16 lg:pt-0">
+		<div id={"why"} className="py-16">
 			<div className="container">
 				<div>
-					<h2 className="font-medium text-primary uppercase text-3xl md:text-4xl">
+					<h2 className="font-semibold uppercase text-3xl md:text-4xl">
 						Why Choose Leadsage
 					</h2>
 					<p className="text-base text-muted-foreground mt-1.5">
@@ -29,7 +29,7 @@ const Why = () => {
 									height={1000}
 									className="w-16 h-1w-16"
 								/>
-								<h4 className="uppercase text-primary font-medium text-base md:text-lg">
+								<h4 className="uppercase font-medium text-base md:text-lg">
 									{title}
 								</h4>
 							</div>

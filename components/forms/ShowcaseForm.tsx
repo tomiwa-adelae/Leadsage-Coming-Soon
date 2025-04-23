@@ -64,7 +64,7 @@ export function ShowcaseForm({ bg = "bg-white text-black" }: { bg?: string }) {
 					type="button"
 					onClick={handleSubmit}
 				>
-					{loading ? "Subscribing..." : "Subscribe"}
+					{loading ? "Joining..." : "Join"}
 				</Button>
 			</div>
 		</div>
