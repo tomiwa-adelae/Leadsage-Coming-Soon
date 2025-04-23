@@ -71,27 +71,22 @@ export const navLinks = [
 	{
 		slug: "#",
 		label: "Home",
-		icon: "/assets/icons/home.svg",
 	},
 	{
 		slug: "#about",
 		label: "About",
-		icon: "/assets/icons/about.svg",
 	},
 	{
 		slug: "#how",
 		label: "How",
-		icon: "/assets/icons/features.svg",
 	},
 	{
 		slug: "#why",
 		label: "Why",
-		icon: "/assets/icons/features.svg",
 	},
 	{
 		slug: "#faqs",
 		label: "Faqs",
-		icon: "/assets/icons/features.svg",
 	},
 	{
 		slug: "#contact",

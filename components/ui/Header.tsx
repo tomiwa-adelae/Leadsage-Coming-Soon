@@ -3,6 +3,7 @@ import { Button } from "./button";
 import Image from "next/image";
 import { navLinks } from "@/constants";
 import { cn } from "@/lib/utils";
+import { MobileNavbar } from "../MobileNavbar";
 
 const Header = () => {
 	return (
@@ -17,7 +18,7 @@ const Header = () => {
 				/>
 			</Link>
 			<div className="flex-1 md:flex items-center justify-end gap-6">
-				<nav className="flex items-center justify-end gap-6">
+				<nav className="hidden md:flex items-center justify-end gap-6">
 					{navLinks.map((link, index) => {
 						return (
 							<Link
@@ -32,9 +33,15 @@ const Header = () => {
 						);
 					})}
 				</nav>
-				<Button asChild size={"lg"}>
+				<Button className="hidden md:flex" asChild size={"lg"}>
 					<Link href="#waitlist">Join</Link>
 				</Button>
+				<div className="md:hidden flex items-center justify-end gap-2 md:gap-4">
+					<Button asChild size={"lg"}>
+						<Link href="#waitlist">Join</Link>
+					</Button>
+					<MobileNavbar />
+				</div>
 			</div>
 		</header>
 	);

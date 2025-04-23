@@ -190,6 +190,7 @@ const ContactForm = () => {
 							disabled={form.formState.isSubmitting}
 							size="lg"
 							type="submit"
+							className="w-full"
 						>
 							{form.formState.isSubmitting
 								? "Sending..."
