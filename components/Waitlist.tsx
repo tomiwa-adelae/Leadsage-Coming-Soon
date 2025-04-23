@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ShowcaseForm } from "./forms/ShowcaseForm";
 import { WaitlistForm } from "./forms/WaitlistForm";
 
 const Waitlist = () => {

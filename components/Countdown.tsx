@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import CountdownBox from "./CountdownBox";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { ShowcaseForm } from "./forms/ShowcaseForm";
 import { Mail } from "lucide-react";
 
 const Countdown = () => {

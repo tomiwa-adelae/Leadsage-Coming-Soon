@@ -2,8 +2,8 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Countdown from "@/components/Countdown";
 import FAQs from "@/components/FAQs";
-import { ShowcaseForm } from "@/components/forms/ShowcaseForm";
 import How from "@/components/How";
+import { ScrollUp } from "@/components/ScrollUp";
 import Showcase from "@/components/Showcase";
 import Test from "@/components/Test";
 import { Button } from "@/components/ui/button";
@@ -35,17 +35,14 @@ const page = () => {
 					</Button>
 				}
 			/>
-			{/* <div className="container mb-16">
-				<Separator />
-			</div> */}
 			<About />
 			<How />
 			<Why />
 			<Countdown />
 			<Waitlist />
-			{/* <Test /> */}
 			<FAQs />
 			<Contact />
+			<ScrollUp />
 		</div>
 	);
 };
