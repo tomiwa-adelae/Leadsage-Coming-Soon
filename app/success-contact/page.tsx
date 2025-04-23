@@ -1,12 +1,12 @@
 import Showcase from "@/components/Showcase";
 import { ColourfulText } from "@/components/ui/colourful-text";
-import { getDetails } from "@/lib/actions/waitlist.actions";
 import { redirect } from "next/navigation";
 
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { email } from "@/constants";
+import { getContactDetails } from "@/lib/actions/contact.actions";
 export const metadata: Metadata = {
 	title: "Message Received | Leadsage",
 	description:
@@ -24,7 +24,7 @@ const page = async ({ searchParams }: SearchParamsProps) => {
 		return <p className="text-center text-red-500">Invalid waitlist ID</p>;
 	}
 
-	const res = await getDetails(query?.id);
+	const res = await getContactDetails(query?.id);
 
 	if (res.status === 400) redirect("/not-found");
 

@@ -24,6 +24,8 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
+import { register } from "@/lib/actions/waitlist.actions";
+import { useRouter } from "next/navigation";
 
 const FormSchema = z.object({
 	name: z.string().min(2, {
@@ -44,6 +46,7 @@ const FormSchema = z.object({
 });
 
 export function WaitlistForm() {
+	const router = useRouter();
 	const { toast } = useToast();
 	const form = useForm<z.infer<typeof FormSchema>>({
 		resolver: zodResolver(FormSchema),
@@ -55,7 +58,36 @@ export function WaitlistForm() {
 		},
 	});
 
-	async function onSubmit(data: z.infer<typeof FormSchema>) {}
+	async function onSubmit(data: z.infer<typeof FormSchema>) {
+		try {
+			const details = {
+				name: data.name,
+				email: data.email,
+				phoneNumber: data.phoneNumber,
+				identity: data.identity,
+			};
+			const res = await register(details);
+
+			if (res?.status == 400)
+				return toast({
+					title: "Error!",
+					description: res?.message,
+					variant: "destructive",
+				});
+
+			toast({
+				title: "Success!",
+				description: res?.message,
+			});
+			router.push(`/success?id=${res?.user?._id}`);
+		} catch (error) {
+			toast({
+				title: "Error!",
+				description: "An error occurred!",
+				variant: "destructive",
+			});
+		}
+	}
 
 	return (
 		<div className="max-w-2xl mx-auto">
