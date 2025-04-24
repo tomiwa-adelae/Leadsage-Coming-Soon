@@ -60,8 +60,8 @@ export const how = [
 	},
 ];
 
-export const twitterURL = "https://twitter.com/";
-export const instagramURL = "https://instagram.com/";
+export const twitterURL = "https://x.com/Leadsageafrica";
+export const instagramURL = "https://instagram.com/leadsageafrica";
 export const linkedinURL = "https://twitter.com/";
 
 export const websiteURL = "https://leadsage-waitlist.vercel.app";
