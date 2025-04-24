@@ -37,7 +37,7 @@ const Header = () => {
 					<Link href="#waitlist">Join</Link>
 				</Button>
 				<div className="md:hidden flex items-center justify-end gap-2 md:gap-4">
-					<Button asChild size={"lg"}>
+					<Button asChild size={"md"}>
 						<Link href="#waitlist">Join</Link>
 					</Button>
 					<MobileNavbar />
