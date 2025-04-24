@@ -17,15 +17,10 @@ import {
 import { Input } from "@/components/ui/input";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import {
-	Select,
-	SelectContent,
-	SelectItem,
-	SelectTrigger,
-	SelectValue,
-} from "@/components/ui/select";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { register } from "@/lib/actions/waitlist.actions";
 import { useRouter } from "next/navigation";
+import { identities } from "@/constants";
 
 const FormSchema = z.object({
 	name: z.string().min(2, {
@@ -156,26 +151,31 @@ export function WaitlistForm() {
 						control={form.control}
 						name="identity"
 						render={({ field }) => (
-							<FormItem>
+							<FormItem className="space-y-3">
 								<FormLabel>Identity</FormLabel>
-								<Select
-									onValueChange={field.onChange}
-									defaultValue={field.value}
-								>
-									<FormControl>
-										<SelectTrigger>
-											<SelectValue placeholder="Who are you?" />
-										</SelectTrigger>
-									</FormControl>
-									<SelectContent>
-										<SelectItem value="Landlord">
-											Landlord
-										</SelectItem>
-										<SelectItem value="Tenant">
-											Tenant
-										</SelectItem>
-									</SelectContent>
-								</Select>
+								<FormControl>
+									<RadioGroup
+										onValueChange={field.onChange}
+										defaultValue={field.value}
+										className="flex flex-wrap space-x-1"
+									>
+										{identities.map((identity, index) => (
+											<FormItem
+												key={index}
+												className="flex items-center space-x-3 space-y-0"
+											>
+												<FormControl>
+													<RadioGroupItem
+														value={identity}
+													/>
+												</FormControl>
+												<FormLabel className="font-normal text-base">
+													{identity}
+												</FormLabel>
+											</FormItem>
+										))}
+									</RadioGroup>
+								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}

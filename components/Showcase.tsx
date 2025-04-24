@@ -20,7 +20,7 @@ const Showcase = ({
 			<div className="pt-16 md:pt-0 flex items-center justify-center">
 				<div className="container grid grid-cols-1 gap-8 md:grid-cols-2">
 					<div className="flex flex-col items-start w-full justify-center">
-						<h1 className="font-bold uppercase text-5xl md:text-5xl lg:text-6xl">
+						<h1 className="font-bold uppercase text-4xl md:text-5xl lg:text-6xl">
 							{headline}
 						</h1>
 						<p className="text-base lg:text-lg text-gray-200 mt-4 mb-6">

@@ -9,9 +9,9 @@ import Link from "next/link";
 import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
-	title: "Registration Successful | Leadsage",
+	title: "Registration Successful | Leadsage Africa",
 	description:
-		"Congratulations! Your spot at Leadsage is secured. Get ready for an unforgettable experience for renting, buying an leasing properties",
+		"Congratulations! Your spot at Leadsage Africa is secured. Get ready for an unforgettable experience for renting, buying an leasing properties",
 };
 
 interface SearchParamsProps {
@@ -39,7 +39,7 @@ const page = async ({ searchParams }: SearchParamsProps) => {
 					</>
 				}
 				description={
-					"Congratulations! Thanks for joining Leadsage. You're now part of the exclusive group that will get first access when we go live."
+					"Congratulations! Thanks for joining Leadsage Africa. You're now part of the exclusive group that will get first access when we go live."
 				}
 				details={
 					<div>

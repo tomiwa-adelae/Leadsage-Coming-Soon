@@ -8,7 +8,7 @@ const How = () => {
 			<div className="container">
 				<div>
 					<h2 className="font-semibold uppercase text-3xl md:text-4xl">
-						How Leadsage Works
+						How Leadsage Africa Works
 					</h2>
 					<p className="text-base text-gray-100 mt-1.5">
 						Our platform makes finding and listing property simple
@@ -33,7 +33,7 @@ const How = () => {
 									{description}
 								</p>
 							</div>
-							<div className="bg-blue-400 rounded-full h-10 w-10 inline-flex items-center justify-center absolute top-[-18px] left-[-15px]">
+							<div className="bg-primary rounded-full h-10 w-10 inline-flex items-center justify-center absolute top-[-18px] left-[-15px]">
 								<h5 className="text-xl font-semibold">
 									{number}
 								</h5>

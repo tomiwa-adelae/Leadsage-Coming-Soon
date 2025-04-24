@@ -64,8 +64,8 @@ export const twitterURL = "https://twitter.com/";
 export const instagramURL = "https://instagram.com/";
 export const linkedinURL = "https://twitter.com/";
 
-export const websiteURL = "https://leadsage.com/";
-export const email = "info@leadsage.com";
+export const websiteURL = "https://leadsage-waitlist.vercel.app";
+export const email = "leadsageafrica@gmail.com";
 export const waitlistWebsiteURL = "https://leadsage-waitlist.vercel.app";
 
 export const navLinks = [
@@ -106,16 +106,16 @@ export const faqs = [
 		answer: "Yes, we prioritize transparency by verifying listings to ensure they are legitimate and accurately represented. Properties with a verification badge have been reviewed for authenticity.",
 	},
 	{
-		question: "Can I list my property on Leadsage?",
+		question: "Can I list my property on Leadsage Africa?",
 		answer: "Absolutely! If you're a landlord or agent, you can create an account and list your property with details, images, and pricing. Our platform also provides tools to track inquiries and manage rent collection.",
 	},
 	{
-		question: "Does Leadsage offer flexible payment plans?",
+		question: "Does Leadsage Africa offer flexible payment plans?",
 		answer: "Yes, some properties offer flexible payment options, including monthly, quarterly, and annual payment plans. You can use filters to find listings that match your preferred payment structure.",
 	},
 	{
 		question: "Is it free to browse properties?",
-		answer: "Yes! Browsing properties on Leadsage is completely free. You only pay when you decide to rent or buy a property through the platform.",
+		answer: "Yes! Browsing properties on Leadsage Africa is completely free. You only pay when you decide to rent or buy a property through the platform.",
 	},
 	{
 		question: "How can I contact customer support?",
@@ -137,15 +137,15 @@ export const contactDetails = [
 	{
 		icon: "/assets/icons/email.svg",
 		title: "Email addresses",
-		details: [{ detail: email }, { detail: "support@leadsage.com" }],
+		details: [{ detail: email }, { detail: "leadsageafrica@gmail.com" }],
 		name: "email",
 	},
 	{
 		icon: "/assets/icons/phone.svg",
 		title: "Phone Numbers",
 		details: [
-			{ detail: "+234 123 456 7890" },
-			{ detail: "+234 987 654 3210" },
+			{ detail: "+234 806 483 9141" },
+			{ detail: "+234 802 783 6001" },
 		],
 		name: "phone",
 	},
@@ -153,18 +153,20 @@ export const contactDetails = [
 
 export const socialLinks = [
 	{
-		name: "Facebook",
-		icon: "/assets/icons/facebook.svg",
-		slug: "https://facebook.com",
+		name: "X",
+		icon: "/assets/icons/twitter.svg",
+		slug: twitterURL,
 	},
 	{
 		name: "Instagram",
 		icon: "/assets/icons/instagram.svg",
-		slug: "https://instagram.com",
+		slug: instagramURL,
 	},
 	{
 		name: "Linkedin",
 		icon: "/assets/icons/linkedin.svg",
-		slug: "https://linkedin.com",
+		slug: linkedinURL,
 	},
 ];
+
+export const identities = ["Landlord", "Renter", "Agent"];

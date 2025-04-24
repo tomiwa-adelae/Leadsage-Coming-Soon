@@ -8,10 +8,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { waitlistWebsiteURL } from "@/constants";
 
 export const metadata: Metadata = {
-	title: "Leadsage - Coming soon",
+	title: "Leadsage Africa - Coming soon",
 	description:
-		"Leadsage: Your trusted housing agency to find apartments, houses, and commercial spaces. Explore properties by category, price, and location to discover your perfect home effortlessly.",
-	keywords:"leadsage, Leadsage africa, africa, housing, nigeria housing, house, landlord, renter, rent, leases, tomiwa, tomiwa adelae",
+		"Leadsage Africa: Your trusted housing agency to find apartments, houses, and commercial spaces. Explore properties by category, price, and location to discover your perfect home effortlessly.",
+	keywords:
+		"leadsage, Leadsage africa, africa, housing, nigeria housing, house, landlord, renter, rent, leases, tomiwa, tomiwa adelae",
 	openGraph: {
 		images: "/assets/images/opengraph.png",
 	},
@@ -29,7 +30,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-		<Head>
+			<Head>
 				<meta property="og:image" content="/opengraph.png" />
 				<meta
 					property="og:image"

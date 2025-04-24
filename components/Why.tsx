@@ -8,7 +8,7 @@ const Why = () => {
 			<div className="container">
 				<div>
 					<h2 className="font-semibold uppercase text-3xl md:text-4xl">
-						Why Choose Leadsage
+						Why Choose Leadsage Africa
 					</h2>
 					<p className="text-base text-muted-foreground mt-1.5">
 						Built for both renters and landlords with simplicity,

@@ -36,9 +36,9 @@ const page = () => {
 			<About />
 			<How />
 			<Why />
-			<Countdown />
-			<Waitlist />
 			<FAQs />
+			<Waitlist />
+			<Countdown />
 			<Contact />
 			<ScrollUp />
 		</div>

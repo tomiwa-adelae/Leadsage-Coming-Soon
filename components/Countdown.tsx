@@ -90,7 +90,7 @@ const Countdown = () => {
 						</h2>
 						<p className="text-base mt-1.5">
 							We're putting the final touches on something
-							amazing. Leadsage is almost here. Stay ready!
+							amazing. Leadsage Africa is almost here. Stay ready!
 						</p>
 					</div>
 					<div className="grid grid-cols-4 gap-4 md:gap-10 mt-8 mb-20">

@@ -19,7 +19,7 @@ export const emailTemplate = (name: string) => `
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Leadsage</title>
+    <title>Welcome to Leadsage Africa</title>
     <style>
       body {
         margin: 0;
@@ -73,16 +73,16 @@ export const emailTemplate = (name: string) => `
     <div class="container">
       <div class="logo">
         <h3 className={'uppercase font-semibold text-2xl lg:text-3xl text-primary hover:text-primary/90 transition ease-out ${inknut.className}}>
-            <Link href={"/"}>Leadsage</Link>
+            <Link href={"/"}>Leadsage Africa</Link>
         </h3>
       </div>
       <h1>You're on the waitlist</h1>
       <p>Hi ${name},</p>
       <p>
-        Thank you for joining the <strong>Leadsage</strong> waitlist — we're thrilled to have you on board!
+        Thank you for joining the <strong>Leadsage Africa</strong> waitlist — we're thrilled to have you on board!
       </p>
       <p>
-        Leadsage is a smarter way to find, book, and manage rental properties. Whether you're a renter or a landlord, we’re building something exciting just for you.
+        Leadsage Africa is a smarter way to find, book, and manage rental properties. Whether you're a renter or a landlord, we’re building something exciting just for you.
       </p>
       <ul>
         <li>✅ Early access to our platform</li>
@@ -103,7 +103,7 @@ export const emailTemplate = (name: string) => `
           <a href="${instagramURL}" target="_blank">Instagram</a> |
           <a href="${linkedinURL}" target="_blank">LinkedIn</a>
         </div>
-        <p style="margin-top: 20px;">&copy; 2025 Leadsage. All rights reserved.</p>
+        <p style="margin-top: 20px;">&copy; 2025 Leadsage Africa. All rights reserved.</p>
       </div>
     </div>
   </body>
