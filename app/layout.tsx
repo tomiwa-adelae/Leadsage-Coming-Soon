@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/ui/Header";
 import { Toaster } from "@/components/ui/toaster";
+import { waitlistWebsiteURL } from "@/constants";
 
 export const metadata: Metadata = {
 	title: "Leadsage - Coming soon",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		images: "/assets/images/opengraph.png",
 	},
-	metadataBase: new URL(websiteURL),
+	metadataBase: new URL(waitlistWebsiteURL),
 };
 
 const montserrat = Montserrat({

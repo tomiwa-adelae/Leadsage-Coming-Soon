@@ -66,6 +66,7 @@ export const linkedinURL = "https://twitter.com/";
 
 export const websiteURL = "https://leadsage.com/";
 export const email = "info@leadsage.com";
+export const waitlistWebsiteURL = "https://leadsage-waitlist.vercel.app";
 
 export const navLinks = [
 	{
