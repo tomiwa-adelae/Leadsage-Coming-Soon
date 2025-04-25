@@ -49,11 +49,9 @@ const page = async ({ searchParams }: SearchParamsProps) => {
 					</>
 				}
 				details={
-					<div>
-						<Button size={"lg"} asChild>
-							<Link href="/">Return to homepage</Link>
-						</Button>
-					</div>
+					<Button className="w-full md:w-auto" size={"lg"} asChild>
+						<Link href="/">Return to homepage</Link>
+					</Button>
 				}
 			/>
 		</div>

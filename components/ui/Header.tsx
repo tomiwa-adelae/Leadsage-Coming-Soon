@@ -14,7 +14,7 @@ const Header = () => {
 					alt={"Leadsage Logo"}
 					width={1000}
 					height={1000}
-					className="w-28 h-28"
+					className="w-40 lg:w-52 object-cover"
 				/>
 			</Link>
 			<div className="flex-1 md:flex items-center justify-end gap-6">

@@ -33,7 +33,7 @@ const How = () => {
 									{description}
 								</p>
 							</div>
-							<div className="bg-primary rounded-full h-10 w-10 inline-flex items-center justify-center absolute top-[-18px] left-[-15px]">
+							<div className="bg-primary rounded-full h-10 w-10 inline-flex items-center justify-center absolute top-[-10px] left-[-5px]">
 								<h5 className="text-xl font-semibold">
 									{number}
 								</h5>

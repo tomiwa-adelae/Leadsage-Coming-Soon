@@ -66,6 +66,8 @@ export const linkedinURL = "https://twitter.com/";
 
 export const websiteURL = "https://leadsage-waitlist.vercel.app";
 export const email = "leadsageafrica@gmail.com";
+export const israelNumber = "+234 806 483 9141";
+export const tomiwaNumber = "+234 802 783 6001";
 export const waitlistWebsiteURL = "https://leadsage-waitlist.vercel.app";
 
 export const navLinks = [
@@ -137,16 +139,13 @@ export const contactDetails = [
 	{
 		icon: "/assets/icons/email.svg",
 		title: "Email addresses",
-		details: [{ detail: email }, { detail: "leadsageafrica@gmail.com" }],
+		details: [{ detail: email }],
 		name: "email",
 	},
 	{
 		icon: "/assets/icons/phone.svg",
 		title: "Phone Numbers",
-		details: [
-			{ detail: "+234 806 483 9141" },
-			{ detail: "+234 802 783 6001" },
-		],
+		details: [{ detail: israelNumber }, { detail: tomiwaNumber }],
 		name: "phone",
 	},
 ];
@@ -166,6 +165,68 @@ export const socialLinks = [
 		name: "Linkedin",
 		icon: "/assets/icons/linkedin.svg",
 		slug: linkedinURL,
+	},
+];
+
+export const footerDetails = [
+	{
+		title: "Company",
+		links: [
+			{
+				slug: "#about",
+				label: "About",
+			},
+			{
+				slug: "#why",
+				label: "Why",
+			},
+			{
+				slug: "#how",
+				label: "How",
+			},
+			{
+				slug: "#waitlist",
+				label: "Join Waitlist",
+			},
+			{
+				slug: "#faqs",
+				label: "FAQS",
+			},
+			{
+				slug: "#contact",
+				label: "Contact",
+			},
+		],
+	},
+	{
+		title: "Affiliate",
+		links: [
+			{
+				slug: "/terms-of-services",
+				label: "Terms of Services",
+			},
+			{
+				slug: "/privacy-policy",
+				label: "Privacy Policy",
+			},
+		],
+	},
+	{
+		title: "Contact",
+		links: [
+			{
+				slug: `mailto:${email}`,
+				label: email,
+			},
+			{
+				slug: `tel:${israelNumber}`,
+				label: israelNumber,
+			},
+			{
+				slug: `tel:${tomiwaNumber}`,
+				label: tomiwaNumber,
+			},
+		],
 	},
 ];
 

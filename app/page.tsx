@@ -26,7 +26,7 @@ const page = () => {
 					"Connect landlords with quality tenants and help renters find their perfect home. Join our waitlist to be among the first to experience the future of property management in Africa."
 				}
 				details={
-					<Button size={"lg"} asChild>
+					<Button className="w-full md:w-auto" size={"lg"} asChild>
 						<Link href="#waitlist">
 							<Mail /> Join waitlist now
 						</Link>

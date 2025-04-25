@@ -10,11 +10,8 @@ import {
 import { navLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
 
 export function MobileNavbar() {
-	const pathname = usePathname();
-
 	return (
 		<Sheet>
 			<SheetTrigger asChild>
@@ -40,34 +37,44 @@ export function MobileNavbar() {
 							alt={"Leadsage Logo"}
 							width={1000}
 							height={1000}
-							className="w-28 h-28"
+							className="w-40 lg:w-52 object-cover"
 						/>
 					</Link>
 				</SheetClose>
 				<nav className="flex flex-col gap-4 mt-4 container">
 					{navLinks.map(({ label, slug }, index) => {
-						const isActive =
-							pathname === slug ||
-							pathname.startsWith(`${slug}/`);
-
 						return (
-							<SheetClose asChild key={index}>
-								<Link
-									href={slug}
-									className={`group flex items-center justify-start gap-2 group/sidebar py-2
-									text-white hover:text-gray-200
-                                    `}
-									onClick={() => {}}
-								>
-									<span className="text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0 uppercase font-medium">
-										{label}
-									</span>
-								</Link>
-							</SheetClose>
+							<Link
+								href={slug}
+								key={index}
+								onClick={(e) => {
+									e.preventDefault(); // Prevent default anchor behavior
+									const element =
+										document.querySelector(slug);
+									if (element) {
+										element.scrollIntoView({
+											behavior: "smooth",
+										});
+										setTimeout(() => {
+											document
+												.getElementById("sheet-close")
+												?.click();
+										}, 300); // Adjust delay if needed
+									}
+								}}
+								className="group flex items-center justify-start gap-2 py-2 text-white hover:text-gray-200"
+							>
+								<span className="text-sm uppercase font-medium group-hover:translate-x-1 transition duration-150">
+									{label}
+								</span>
+							</Link>
 						);
 					})}
 				</nav>
 			</SheetContent>
+			<SheetClose asChild>
+				<button id="sheet-close" className="hidden" />
+			</SheetClose>
 		</Sheet>
 	);
 }

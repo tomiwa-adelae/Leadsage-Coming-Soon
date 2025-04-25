@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const About = () => {
 	return (
-		<div id="about" className="bg-white text-black py-16">
-			<div className="container grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-				<div className="flex items-center justify-between">
+		<div id="about" className="bg-white text-black py-16 container">
+			<div className=" grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full">
+				<div className="flex items-center justify-between w-full">
 					<Image
 						src={"/assets/images/about.png"}
 						alt={"2 images of a building"}
