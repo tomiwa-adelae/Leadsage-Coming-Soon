@@ -14,8 +14,8 @@ const page = () => {
 			<Showcase
 				headline={
 					<>
-						Affiliate Program Terms of{" "}
-						<ColourfulText text="Services" />
+						Affiliate Program Terms and{" "}
+						<ColourfulText text="Conditions" />
 					</>
 				}
 				description={
