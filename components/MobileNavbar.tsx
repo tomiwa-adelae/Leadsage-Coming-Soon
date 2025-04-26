@@ -1,19 +1,28 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-	Sheet,
-	SheetClose,
-	SheetContent,
-	SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
 export function MobileNavbar() {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const handleLinkClick = (slug: string) => {
+		const element = document.querySelector(slug);
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" });
+
+			// Close the sheet AFTER scroll (mobile browsers need a longer wait)
+			setTimeout(() => {
+				setIsOpen(false);
+			}, 400); // 400ms is safer for mobile smooth scroll
+		}
+	};
 	return (
-		<Sheet>
+		<Sheet open={isOpen} onOpenChange={setIsOpen}>
 			<SheetTrigger asChild>
 				<Button
 					variant="ghost"
@@ -30,51 +39,29 @@ export function MobileNavbar() {
 				</Button>
 			</SheetTrigger>
 			<SheetContent className="h-screen" side={"left"}>
-				<SheetClose asChild>
-					<Link href={"/"}>
-						<Image
-							src={"/assets/images/logo.png"}
-							alt={"Leadsage Logo"}
-							width={1000}
-							height={1000}
-							className="w-40 lg:w-52 object-cover"
-						/>
-					</Link>
-				</SheetClose>
+				<p onClick={() => setIsOpen(false)}>
+					<Image
+						src={"/assets/images/logo.png"}
+						alt={"Leadsage Logo"}
+						width={1000}
+						height={1000}
+						className="w-28 h-28"
+					/>
+				</p>
 				<nav className="flex flex-col gap-4 mt-4 container">
-					{navLinks.map(({ label, slug }, index) => {
-						return (
-							<Link
-								href={slug}
-								key={index}
-								onClick={(e) => {
-									e.preventDefault(); // Prevent default anchor behavior
-									const element =
-										document.querySelector(slug);
-									if (element) {
-										element.scrollIntoView({
-											behavior: "smooth",
-										});
-										setTimeout(() => {
-											document
-												.getElementById("sheet-close")
-												?.click();
-										}, 300); // Adjust delay if needed
-									}
-								}}
-								className="group flex items-center justify-start gap-2 py-2 text-white hover:text-gray-200"
-							>
-								<span className="text-sm uppercase font-medium group-hover:translate-x-1 transition duration-150">
-									{label}
-								</span>
-							</Link>
-						);
-					})}
+					{navLinks.map(({ label, slug }, index) => (
+						<button
+							key={index}
+							onClick={() => handleLinkClick(slug)}
+							className="group flex items-center justify-start gap-2 py-2 text-white hover:text-gray-200 text-left"
+						>
+							<span className="text-sm uppercase font-medium group-hover:translate-x-1 transition duration-150">
+								{label}
+							</span>
+						</button>
+					))}
 				</nav>
 			</SheetContent>
-			<SheetClose asChild>
-				<button id="sheet-close" className="hidden" />
-			</SheetClose>
 		</Sheet>
 	);
 }

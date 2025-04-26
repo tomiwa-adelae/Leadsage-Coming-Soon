@@ -10,7 +10,7 @@ const About = () => {
 						alt={"2 images of a building"}
 						width={1000}
 						height={1000}
-						className="w-auto h-auto order-2"
+						className="size-full aspect-auto"
 					/>
 				</div>
 				<div className="flex flex-col items-start justify-center md:order-2">
