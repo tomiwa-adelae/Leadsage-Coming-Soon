@@ -60,15 +60,15 @@ export const how = [
 	},
 ];
 
-export const twitterURL = "https://x.com/LeadSageafrica";
-export const instagramURL = "https://instagram.com/LeadSageafrica";
+export const twitterURL = "https://x.com/leadsageafrica";
+export const instagramURL = "https://instagram.com/leadsageafrica";
 export const linkedinURL = "https://twitter.com/";
 
-export const websiteURL = "https://LeadSage-waitlist.vercel.app";
-export const email = "LeadSageafrica@gmail.com";
+export const websiteURL = "https://leadsageafrica.com";
+export const email = "leadsageafrica@gmail.com";
 export const israelNumber = "+234 806 483 9141";
 export const tomiwaNumber = "+234 802 783 6001";
-export const waitlistWebsiteURL = "https://LeadSage-waitlist.vercel.app";
+export const waitlistWebsiteURL = "https://leadsageafrica.com";
 
 export const navLinks = [
 	{
