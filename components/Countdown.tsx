@@ -77,7 +77,7 @@ const Countdown = () => {
 			>
 				<source
 					src={
-						"https://res.cloudinary.com/dh0rc6p1c/video/upload/v1744907189/leadsage/videos/856661-hd_1920_1080_25fps_t2v6ti.mp4"
+						"https://res.cloudinary.com/dh0rc6p1c/video/upload/v1744907189/LeadSage/videos/856661-hd_1920_1080_25fps_t2v6ti.mp4"
 					}
 					type="video/mp4"
 				/>
@@ -90,7 +90,7 @@ const Countdown = () => {
 						</h2>
 						<p className="text-base mt-1.5">
 							We're putting the final touches on something
-							amazing. Leadsage Africa is almost here. Stay ready!
+							amazing. LeadSage Africa is almost here. Stay ready!
 						</p>
 					</div>
 					<div className="grid grid-cols-4 gap-4 md:gap-10 mt-8 mb-20">

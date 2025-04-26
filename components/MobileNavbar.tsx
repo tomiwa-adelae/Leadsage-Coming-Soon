@@ -31,7 +31,7 @@ export function MobileNavbar() {
 				<Link href={"/"} onClick={() => setOpen(false)}>
 					<Image
 						src={"/assets/images/logo.png"}
-						alt={"Leadsage Logo"}
+						alt={"LeadSage Logo"}
 						width={1000}
 						height={1000}
 						className="w-40 lg:w-52 object-cover"

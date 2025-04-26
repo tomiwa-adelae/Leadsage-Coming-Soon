@@ -11,7 +11,7 @@ const Header = () => {
 			<Link href={"/"}>
 				<Image
 					src={"/assets/images/logo.png"}
-					alt={"Leadsage Logo"}
+					alt={"LeadSage Logo"}
 					width={1000}
 					height={1000}
 					className="w-40 lg:w-52 object-cover"
@@ -33,14 +33,14 @@ const Header = () => {
 						);
 					})}
 				</nav>
-				<Button className="hidden md:flex" asChild size={"lg"}>
+				<Button className="hidden md:flex" asChild size={"md"}>
 					<Link href="#waitlist">Join</Link>
 				</Button>
 				<div className="md:hidden flex items-center justify-end gap-2 md:gap-4">
 					<Button asChild size={"md"}>
 						<Link href="#waitlist">Join</Link>
 					</Button>
-					<MobileNavbar />
+					{/* <MobileNavbar /> */}
 				</div>
 			</div>
 		</header>

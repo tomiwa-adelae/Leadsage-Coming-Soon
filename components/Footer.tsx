@@ -13,7 +13,7 @@ const Footer = () => {
 						<Link href={"/"}>
 							<Image
 								src={"/assets/images/logo.png"}
-								alt={"Leadsage Logo"}
+								alt={"LeadSage Logo"}
 								width={1000}
 								height={1000}
 								className="w-40 lg:w-52 object-cover"
@@ -67,7 +67,7 @@ const Footer = () => {
 			</div>
 			<div className="bg-[#122D27] hover:text-secondary transition-all py-8 text-center text-white font-medium uppercase text-xs">
 				<p className="container">
-					&copy; {year} Leadsage Africa. All rights reserved.
+					&copy; {year} LeadSage Africa. All rights reserved.
 				</p>
 			</div>
 		</footer>

@@ -30,9 +30,6 @@ const FormSchema = z.object({
 	email: z.string().email().min(2, {
 		message: "Email is required.",
 	}),
-	identity: z
-		.string()
-		.min(2, { message: "Please select what you would want to join as" }),
 });
 
 export function WaitlistForm() {
@@ -46,7 +43,6 @@ export function WaitlistForm() {
 		defaultValues: {
 			name: "",
 			email: "",
-			identity: "",
 		},
 	});
 
@@ -55,7 +51,7 @@ export function WaitlistForm() {
 			const details = {
 				name: data.name,
 				email: data.email,
-				identity: data.identity,
+				identity: identity,
 			};
 			const res = await register(details);
 

@@ -8,9 +8,9 @@ import Link from "next/link";
 import { email } from "@/constants";
 import { getContactDetails } from "@/lib/actions/contact.actions";
 export const metadata: Metadata = {
-	title: "Message Received | Leadsage Africa",
+	title: "Message Received | LeadSage Africa",
 	description:
-		"Thank you for reaching out! Our team will get back to you soon. Stay tuned for updates on Leadsage Africa",
+		"Thank you for reaching out! Our team will get back to you soon. Stay tuned for updates on LeadSage Africa",
 };
 
 interface SearchParamsProps {

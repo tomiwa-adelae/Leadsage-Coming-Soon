@@ -19,7 +19,7 @@ export const emailTemplate = (name: string) => `
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Leadsage Africa</title>
+    <title>Welcome to LeadSage Africa</title>
     <style>
       body {
         margin: 0;
@@ -73,16 +73,16 @@ export const emailTemplate = (name: string) => `
     <div class="container">
       <div class="logo">
         <h3 className={'uppercase font-semibold text-2xl lg:text-3xl text-primary hover:text-primary/90 transition ease-out ${inknut.className}}>
-            <Link href={"/"}>Leadsage Africa</Link>
+            <Link href={"/"}>LeadSage Africa</Link>
         </h3>
       </div>
       <h1>You're on the waitlist</h1>
       <p>Hi ${name},</p>
       <p>
-        Thank you for joining the <strong>Leadsage Africa</strong> waitlist — we're thrilled to have you on board!
+        Thank you for joining the <strong>LeadSage Africa</strong> waitlist — we're thrilled to have you on board!
       </p>
       <p>
-        Leadsage Africa is a smarter way to find, book, and manage rental properties. Whether you're a renter or a landlord, we’re building something exciting just for you.
+        LeadSage Africa is a smarter way to find, book, and manage rental properties. Whether you're a renter or a landlord, we’re building something exciting just for you.
       </p>
       <ul>
         <li>✅ Early access to our platform</li>
@@ -103,7 +103,7 @@ export const emailTemplate = (name: string) => `
           <a href="${instagramURL}" target="_blank">Instagram</a> |
           <a href="${linkedinURL}" target="_blank">LinkedIn</a>
         </div>
-        <p style="margin-top: 20px;">&copy; 2025 Leadsage Africa. All rights reserved.</p>
+        <p style="margin-top: 20px;">&copy; 2025 LeadSage Africa. All rights reserved.</p>
       </div>
     </div>
   </body>
@@ -116,7 +116,7 @@ export const generateUserContactTemplate = (name: string) => `
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Leadsage Africa Waitlist</title>
+  <title>Welcome to LeadSage Africa Waitlist</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -179,14 +179,14 @@ export const generateUserContactTemplate = (name: string) => `
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo">LEADSAGE AFRICA</div>
+      <div class="logo">LeadSage AFRICA</div>
     </div>
     <div class="content">
       <h2>Thank You for Joining Our Waitlist!</h2>
       
       <p>Hello ${name},</p>
       
-      <p>Thank you for your interest in <span class="highlight">Leadsage Africa</span> – we're excited to have you join our waitlist!</p>
+      <p>Thank you for your interest in <span class="highlight">LeadSage Africa</span> – we're excited to have you join our waitlist!</p>
       
       <p>We're building a revolutionary platform that will transform the housing market in Africa by connecting landlords and tenants in a seamless digital experience.</p>
       
@@ -198,7 +198,7 @@ export const generateUserContactTemplate = (name: string) => `
         <li>The opportunity to provide feedback that shapes our platform</li>
       </ul>
       
-      <p>We'll keep you informed about our development milestones and notify you as soon as Leadsage Africa is ready for you to explore.</p>
+      <p>We'll keep you informed about our development milestones and notify you as soon as LeadSage Africa is ready for you to explore.</p>
       
       <center><a href="${websiteURL}" class="button">LEARN MORE</a></center>
       
@@ -207,7 +207,7 @@ export const generateUserContactTemplate = (name: string) => `
       <p>Thank you for being part of our journey!</p>
       
       <p>Warm regards,<br>
-      The Leadsage Africa Team</p>
+      The LeadSage Africa Team</p>
     </div>
     <div class="footer">
       <div class="social">
@@ -216,8 +216,8 @@ export const generateUserContactTemplate = (name: string) => `
         <a href="#">Instagram</a> | 
         <a href="#">LinkedIn</a>
       </div>
-      <p>© 2025 Leadsage Africa. All rights reserved.</p>
-      <p>You're receiving this email because you signed up for updates on Leadsage Africa.<br>
+      <p>© 2025 LeadSage Africa. All rights reserved.</p>
+      <p>You're receiving this email because you signed up for updates on LeadSage Africa.<br>
       If you'd like to unsubscribe, <a href="#">click here</a>.</p>
     </div>
   </div>
@@ -235,7 +235,7 @@ export const generateAdminContactTemplate = (
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Waitlist Registration - Leadsage Africa</title>
+  <title>New Waitlist Registration - LeadSage Africa</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -307,12 +307,12 @@ export const generateAdminContactTemplate = (
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo">LEADSAGE AFRICA - ADMIN</div>
+      <div class="logo">LeadSage AFRICA - ADMIN</div>
     </div>
     <div class="content">
       <h2>New Waitlist Registration</h2>
       
-      <p>A new user has joined the Leadsage Africa waitlist.</p>
+      <p>A new user has joined the LeadSage Africa waitlist.</p>
       
       <div class="user-details">
         <div class="detail-row">
@@ -333,7 +333,7 @@ export const generateAdminContactTemplate = (
       <p>You can respond directly to this user by replying to this email or through the admin dashboard.</p>
     </div>
     <div class="footer">
-      <p>© 2025 Leadsage Africa. Internal notification - do not forward.</p>
+      <p>© 2025 LeadSage Africa. Internal notification - do not forward.</p>
       <p>To adjust your notification settings, visit the admin dashboard.</p>
     </div>
   </div>

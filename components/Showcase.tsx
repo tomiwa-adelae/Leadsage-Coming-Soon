@@ -1,5 +1,4 @@
 import React from "react";
-import LottieAnimation from "./LottieAnimation";
 import Header from "./ui/Header";
 import Image from "next/image";
 
@@ -10,7 +9,7 @@ const Showcase = ({
 }: {
 	headline: React.ReactNode;
 	description: string | React.ReactNode;
-	details: React.ReactNode;
+	details?: React.ReactNode;
 }) => {
 	return (
 		<div

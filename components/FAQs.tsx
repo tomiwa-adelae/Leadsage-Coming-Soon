@@ -17,7 +17,7 @@ const FAQs = () => {
 						Frequently Asked Questions
 					</h2>
 					<p className="text-base text-gray-200 mt-2.5">
-						Answers to common questions about Leadsage Africa
+						Answers to common questions about LeadSage Africa
 					</p>
 				</div>
 				<div className="mt-8">

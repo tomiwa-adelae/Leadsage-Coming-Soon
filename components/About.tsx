@@ -26,7 +26,7 @@ const About = () => {
 				</div>
 				<div className="flex flex-col items-start justify-center md:order-2">
 					<h2 className="font-semibold uppercase text-3xl md:text-4xl">
-						About Leadsage Africa
+						About LeadSage Africa
 					</h2>
 					<p className="text-base text-muted-foreground mt-1.5">
 						LeadSage Africa is transforming the housing and service

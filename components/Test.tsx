@@ -30,7 +30,7 @@ export default function Test() {
 					<div className="flex justify-between h-16">
 						<div className="flex items-center">
 							<div className="text-2xl font-bold text-green-600">
-								Leadsage
+								LeadSage
 							</div>
 							<div className="ml-1 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
 								Africa
@@ -136,7 +136,7 @@ export default function Test() {
 							Revolutionizing Housing in Africa
 						</h2>
 						<p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-							Leadsage Africa brings landlords and tenants
+							LeadSage Africa brings landlords and tenants
 							together on a digital platform designed for the
 							unique needs of the African market.
 						</p>
@@ -214,7 +214,7 @@ export default function Test() {
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center">
 						<h2 className="text-3xl font-extrabold text-gray-900">
-							How Leadsage Africa Works
+							How LeadSage Africa Works
 						</h2>
 						<p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
 							Our platform makes finding and listing property
@@ -532,7 +532,7 @@ export default function Test() {
 							Frequently Asked Questions
 						</h2>
 						<p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-							Answers to common questions about Leadsage Africa
+							Answers to common questions about LeadSage Africa
 						</p>
 					</div>
 					<div className="mt-12 max-w-3xl mx-auto">
@@ -557,7 +557,7 @@ export default function Test() {
 						<div className="space-y-8 xl:col-span-1">
 							<div className="flex items-center">
 								<div className="text-2xl font-bold text-green-600">
-									Leadsage
+									LeadSage
 								</div>
 								<div className="ml-1 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
 									Africa
@@ -725,10 +725,10 @@ export default function Test() {
 									<ul className="mt-4 space-y-4">
 										<li>
 											<a
-												href="mailto:info@leadsageafrica.com"
+												href="mailto:info@LeadSageafrica.com"
 												className="text-base text-gray-500 hover:text-gray-900"
 											>
-												info@leadsageafrica.com
+												info@LeadSageafrica.com
 											</a>
 										</li>
 										<li>
@@ -743,7 +743,7 @@ export default function Test() {
 					</div>
 					<div className="mt-12 border-t border-gray-200 pt-8">
 						<p className="text-base text-gray-400 xl:text-center">
-							&copy; 2025 Leadsage Africa. All rights reserved.
+							&copy; 2025 LeadSage Africa. All rights reserved.
 						</p>
 					</div>
 				</div>

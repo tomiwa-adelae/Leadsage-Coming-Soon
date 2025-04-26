@@ -60,15 +60,15 @@ export const how = [
 	},
 ];
 
-export const twitterURL = "https://x.com/Leadsageafrica";
-export const instagramURL = "https://instagram.com/leadsageafrica";
+export const twitterURL = "https://x.com/LeadSageafrica";
+export const instagramURL = "https://instagram.com/LeadSageafrica";
 export const linkedinURL = "https://twitter.com/";
 
-export const websiteURL = "https://leadsage-waitlist.vercel.app";
-export const email = "leadsageafrica@gmail.com";
+export const websiteURL = "https://LeadSage-waitlist.vercel.app";
+export const email = "LeadSageafrica@gmail.com";
 export const israelNumber = "+234 806 483 9141";
 export const tomiwaNumber = "+234 802 783 6001";
-export const waitlistWebsiteURL = "https://leadsage-waitlist.vercel.app";
+export const waitlistWebsiteURL = "https://LeadSage-waitlist.vercel.app";
 
 export const navLinks = [
 	{
@@ -100,24 +100,24 @@ export const navLinks = [
 
 export const faqs = [
 	{
-		question: "How does Leadsage Africa work?",
-		answer: "Leadsage Africa connects tenants with verified property listings and helps landlords manage their rentals. Simply search for properties, filter by location and price, and contact the property owner or agent directly.",
+		question: "How does LeadSage Africa work?",
+		answer: "LeadSage Africa connects tenants with verified property listings and helps landlords manage their rentals. Simply search for properties, filter by location and price, and contact the property owner or agent directly.",
 	},
 	{
 		question: "Are all property listings verified?",
 		answer: "Yes, we prioritize transparency by verifying listings to ensure they are legitimate and accurately represented. Properties with a verification badge have been reviewed for authenticity.",
 	},
 	{
-		question: "Can I list my property on Leadsage Africa?",
+		question: "Can I list my property on LeadSage Africa?",
 		answer: "Absolutely! If you're a landlord or agent, you can create an account and list your property with details, images, and pricing. Our platform also provides tools to track inquiries and manage rent collection.",
 	},
 	{
-		question: "Does Leadsage Africa offer flexible payment plans?",
+		question: "Does LeadSage Africa offer flexible payment plans?",
 		answer: "Yes, some properties offer flexible payment options, including monthly, quarterly, and annual payment plans. You can use filters to find listings that match your preferred payment structure.",
 	},
 	{
 		question: "Is it free to browse properties?",
-		answer: "Yes! Browsing properties on Leadsage Africa is completely free. You only pay when you decide to rent or buy a property through the platform.",
+		answer: "Yes! Browsing properties on LeadSage Africa is completely free. You only pay when you decide to rent or buy a property through the platform.",
 	},
 	{
 		question: "How can I contact customer support?",
@@ -202,8 +202,12 @@ export const footerDetails = [
 		title: "Affiliate",
 		links: [
 			{
-				slug: "/terms-of-services",
-				label: "Terms of Services",
+				slug: "",
+				label: "Affiliate",
+			},
+			{
+				slug: "/terms-and-conditions",
+				label: "Terms and Conditions",
 			},
 			{
 				slug: "/privacy-policy",

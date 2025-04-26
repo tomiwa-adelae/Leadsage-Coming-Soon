@@ -10,7 +10,7 @@ const Contact = () => {
 						Contact Us
 					</h2>
 					<p className="text-base text-muted-foreground mt-1.5">
-						Have questions about Leadsage Africa? We're here to
+						Have questions about LeadSage Africa? We're here to
 						help. Fill out the form below and our team will get back
 						to you as soon as possible.
 					</p>

@@ -52,8 +52,8 @@ export const contactUs = async (user: {
 							Name: contact.name,
 						},
 					],
-					Subject: `We Received Your Message – Leadsage Africa`,
-					TextPart: `We Received Your Message – Leadsage Africa`,
+					Subject: `We Received Your Message – LeadSage Africa`,
+					TextPart: `We Received Your Message – LeadSage Africa`,
 					HTMLPart: generateUserContactTemplate(contact.name),
 				},
 			],
@@ -70,11 +70,11 @@ export const contactUs = async (user: {
 					To: [
 						{
 							Email: process.env.ADMIN_EMAIL_ADDRESS!, // Admin Email
-							Name: "Leadsage Africa Team",
+							Name: "LeadSage Africa Team",
 						},
 					],
-					Subject: ` New Contact Form Submission – Leadsage Africa`,
-					TextPart: ` New Contact Form Submission – Leadsage Africa`,
+					Subject: ` New Contact Form Submission – LeadSage Africa`,
+					TextPart: ` New Contact Form Submission – LeadSage Africa`,
 					HTMLPart: generateAdminContactTemplate(
 						contact.name,
 						contact.email,
