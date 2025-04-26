@@ -4,14 +4,25 @@ const About = () => {
 	return (
 		<div id="about" className="bg-white text-black py-16 container">
 			<div className=" grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full">
-				<div className="flex items-center justify-between w-full">
-					<Image
-						src={"/assets/images/about.png"}
-						alt={"2 images of a building"}
-						width={1000}
-						height={1000}
-						className="size-full aspect-auto"
-					/>
+				<div className="grid grid-cols-2 grid-rows-2 gap-2">
+					<div className="row-span-2">
+						<Image
+							src={"/assets/images/showcase-3.jpg"}
+							alt={"Showcase image three"}
+							width={1000}
+							height={1000}
+							className="object-cover size-full aspect-auto rounded-2xl"
+						/>
+					</div>
+					<div className="row-span-2">
+						<Image
+							src={"/assets/images/showcase-4.jpg"}
+							alt={"Showcase image four"}
+							width={1000}
+							height={1000}
+							className="object-cover size-full aspect-auto rounded-2xl"
+						/>
+					</div>
 				</div>
 				<div className="flex flex-col items-start justify-center md:order-2">
 					<h2 className="font-semibold uppercase text-3xl md:text-4xl">

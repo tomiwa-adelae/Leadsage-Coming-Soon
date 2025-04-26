@@ -21,6 +21,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { register } from "@/lib/actions/waitlist.actions";
 import { useRouter } from "next/navigation";
 import { identities } from "@/constants";
+import { useState } from "react";
 
 const FormSchema = z.object({
 	name: z.string().min(2, {
@@ -29,12 +30,6 @@ const FormSchema = z.object({
 	email: z.string().email().min(2, {
 		message: "Email is required.",
 	}),
-	phoneNumber: z
-		.string()
-		.regex(/^(\+?\d{10,15})$/, { message: "Enter a valid phone number." })
-		.refine(isValidPhoneNumber, {
-			message: "Invalid phone number",
-		}),
 	identity: z
 		.string()
 		.min(2, { message: "Please select what you would want to join as" }),
@@ -43,12 +38,14 @@ const FormSchema = z.object({
 export function WaitlistForm() {
 	const router = useRouter();
 	const { toast } = useToast();
+
+	const [identity, setIdentity] = useState("");
+
 	const form = useForm<z.infer<typeof FormSchema>>({
 		resolver: zodResolver(FormSchema),
 		defaultValues: {
 			name: "",
 			email: "",
-			phoneNumber: "",
 			identity: "",
 		},
 	});
@@ -58,7 +55,6 @@ export function WaitlistForm() {
 			const details = {
 				name: data.name,
 				email: data.email,
-				phoneNumber: data.phoneNumber,
 				identity: data.identity,
 			};
 			const res = await register(details);
@@ -126,33 +122,33 @@ export function WaitlistForm() {
 							</FormItem>
 						)}
 					/>
-					<FormField
-						control={form.control}
-						name="phoneNumber"
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Phone Number</FormLabel>
-								<FormControl>
-									<PhoneInput
-										placeholder="Enter phone number"
-										value={field.value}
-										onChange={(phone) => {
-											field.onChange(phone);
-										}}
-										defaultCountry="NG"
-										className="flex h-14 w-full rounded-md border border-input bg-background px-3 py-2 text-base sm:text-sm"
-									/>
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
-					<FormField
+					<div>
+						<FormLabel>Tell us who you are</FormLabel>
+						<div className="flex items-center justify-between gap-4 mt-4">
+							{identities.map((id, index) => (
+								<Button
+									key={index}
+									type="button"
+									variant={
+										identity === id
+											? "default"
+											: "secondary"
+									}
+									onClick={() => setIdentity(id)}
+									size={"md"}
+									className="cursor-pointer"
+								>
+									{id}
+								</Button>
+							))}
+						</div>
+					</div>
+					{/* <FormField
 						control={form.control}
 						name="identity"
 						render={({ field }) => (
 							<FormItem className="space-y-3">
-								<FormLabel>Identity</FormLabel>
+								<FormLabel>Tell us who you are</FormLabel>
 								<FormControl>
 									<RadioGroup
 										onValueChange={field.onChange}
@@ -179,7 +175,7 @@ export function WaitlistForm() {
 								<FormMessage />
 							</FormItem>
 						)}
-					/>
+					/> */}
 					<Button
 						disabled={form.formState.isSubmitting}
 						type="submit"

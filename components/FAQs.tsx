@@ -25,9 +25,7 @@ const FAQs = () => {
 						{faqs.map(({ question, answer }, index) => (
 							<AccordionItem value={`${index}`} key={index}>
 								<AccordionTrigger>{question}</AccordionTrigger>
-								<AccordionContent>
-									{answer} to the WAI-ARIA design pattern.
-								</AccordionContent>
+								<AccordionContent>{answer}</AccordionContent>
 							</AccordionItem>
 						))}
 					</Accordion>

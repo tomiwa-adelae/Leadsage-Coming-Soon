@@ -50,10 +50,6 @@ const Showcase = ({
 							/>
 						</div>
 					</div>
-					{/*     
-					<div className="flex items-center justify-center">
-						<LottieAnimation />
-					</div> */}
 				</div>
 			</div>
 		</div>

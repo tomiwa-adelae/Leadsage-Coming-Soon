@@ -13,18 +13,12 @@ const mailjet = Mailjet.apiConnect(
 export const register = async (details: {
 	name: string;
 	email: string;
-	phoneNumber: string;
 	identity: string;
 }) => {
 	try {
 		await connectToDatabase();
 
-		if (
-			!details.email ||
-			!details.name ||
-			!details.phoneNumber ||
-			!details.identity
-		)
+		if (!details.email || !details.name || !details.identity)
 			return {
 				status: 400,
 				message: "Oops! Please enter all fields.",

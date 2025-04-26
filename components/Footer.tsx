@@ -1,11 +1,12 @@
 import { footerDetails, socialLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { Separator } from "./ui/separator";
 
 const Footer = () => {
 	const year = new Date().getFullYear();
 	return (
-		<footer className="bg-white">
+		<footer className="bg-[#122D27] text-white">
 			<div className="container border-t">
 				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-16">
 					<div className="col-span-2 md:col-span-1 lg:col-span-2">
@@ -15,10 +16,10 @@ const Footer = () => {
 								alt={"Leadsage Logo"}
 								width={1000}
 								height={1000}
-								className="w-40 lg:w-52 object-cover invert"
+								className="w-40 lg:w-52 object-cover"
 							/>
 						</Link>
-						<p className="text-muted-foreground text-base mt-4">
+						<p className="text-gray-200 text-base mt-4">
 							Digitalizing Africa's housing market. Connecting
 							landlords with renters for a seamless property
 							experience.
@@ -44,14 +45,14 @@ const Footer = () => {
 					</div>
 					{footerDetails.map(({ title, links }, index) => (
 						<div key={index} className="">
-							<h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+							<h3 className="text-sm font-semibold tracking-wider uppercase">
 								{title}
 							</h3>
 							<ul className="mt-4 space-y-4">
 								{links.map(({ slug, label }, idx) => (
 									<li
 										key={idx}
-										className="text-base text-muted-foreground hover:text-primary"
+										className="text-base text-gray-200 hover:text-primary"
 									>
 										<Link href={slug}>{label}</Link>
 									</li>
@@ -60,6 +61,9 @@ const Footer = () => {
 						</div>
 					))}
 				</div>
+			</div>
+			<div className="container">
+				<Separator />
 			</div>
 			<div className="bg-[#122D27] hover:text-secondary transition-all py-8 text-center text-white font-medium uppercase text-xs">
 				<p className="container">
