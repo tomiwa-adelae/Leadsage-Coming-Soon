@@ -42,7 +42,7 @@ const Header = ({ links }: { links: boolean }) => {
 					<Button asChild size={"md"}>
 						<Link href="/#waitlist">Join</Link>
 					</Button>
-					{links && <MobileNavbar links={links} />}
+					{/* {links && <MobileNavbar links={links} />} */}
 				</div>
 			</div>
 		</header>
