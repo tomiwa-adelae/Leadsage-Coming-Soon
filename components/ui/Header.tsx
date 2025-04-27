@@ -40,7 +40,7 @@ const Header = () => {
 					<Button asChild size={"md"}>
 						<Link href="#waitlist">Join</Link>
 					</Button>
-					{/* <MobileNavbar /> */}
+					<MobileNavbar />
 				</div>
 			</div>
 		</header>

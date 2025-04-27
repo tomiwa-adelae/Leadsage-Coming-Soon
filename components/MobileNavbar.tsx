@@ -1,17 +1,19 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+	Sheet,
+	SheetClose,
+	SheetContent,
+	SheetTrigger,
+} from "@/components/ui/sheet";
 import { navLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
 export function MobileNavbar() {
-	const [open, setOpen] = useState(false);
-
 	return (
-		<Sheet open={open} onOpenChange={setOpen}>
+		<Sheet>
 			<SheetTrigger asChild>
 				<Button
 					variant="ghost"
@@ -27,8 +29,8 @@ export function MobileNavbar() {
 					/>
 				</Button>
 			</SheetTrigger>
-			<SheetContent className="h-screen py-8 px-8" side={"left"}>
-				<Link href={"/"} onClick={() => setOpen(false)}>
+			<SheetContent className="h-screen" side={"left"}>
+				<Link href={"/"}>
 					<Image
 						src={"/assets/images/logo.png"}
 						alt={"LeadSage Logo"}
@@ -38,18 +40,21 @@ export function MobileNavbar() {
 					/>
 				</Link>
 				<nav className="flex flex-col gap-4 mt-4 container">
-					{navLinks.map(({ label, slug }, index) => (
-						<Link
-							onClick={() => setOpen(false)}
-							href={slug}
-							key={index}
-							className="group flex items-center justify-start gap-2 py-2 text-white hover:text-gray-200 text-left"
-						>
-							<span className="text-sm uppercase font-medium group-hover:translate-x-1 transition duration-150">
-								{label}
-							</span>
-						</Link>
-					))}
+					{navLinks.map(({ label, slug }, index) => {
+						return (
+							<SheetClose asChild key={index}>
+								<Link
+									href={slug}
+									className={`group flex items-center justify-start gap-2 group/sidebar py-2 text-white hover:text-gray-200`}
+									onClick={() => {}}
+								>
+									<span className="text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0 uppercase font-medium">
+										{label}
+									</span>
+								</Link>
+							</SheetClose>
+						);
+					})}
 				</nav>
 			</SheetContent>
 		</Sheet>
