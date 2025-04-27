@@ -11,7 +11,7 @@ import { navLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
-export function MobileNavbar() {
+export function MobileNavbar({ links }: { links: boolean }) {
 	return (
 		<Sheet>
 			<SheetTrigger asChild>
@@ -29,7 +29,10 @@ export function MobileNavbar() {
 					/>
 				</Button>
 			</SheetTrigger>
-			<SheetContent className="h-screen" side={"left"}>
+			<SheetContent
+				className="bg-[#204B41] text-white  h-screen"
+				side={"left"}
+			>
 				<Link href={"/"}>
 					<Image
 						src={"/assets/images/logo.png"}
@@ -39,23 +42,25 @@ export function MobileNavbar() {
 						className="w-40 lg:w-52 object-cover"
 					/>
 				</Link>
-				<nav className="flex flex-col gap-4 mt-4 container">
-					{navLinks.map(({ label, slug }, index) => {
-						return (
-							<SheetClose asChild key={index}>
-								<Link
-									href={slug}
-									className={`group flex items-center justify-start gap-2 group/sidebar py-2 text-white hover:text-gray-200`}
-									onClick={() => {}}
-								>
-									<span className="text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0 uppercase font-medium">
-										{label}
-									</span>
-								</Link>
-							</SheetClose>
-						);
-					})}
-				</nav>
+				{links && (
+					<nav className="flex flex-col gap-4 mt-4 container">
+						{navLinks.map(({ label, slug }, index) => {
+							return (
+								<SheetClose asChild key={index}>
+									<Link
+										href={slug}
+										className={`group flex items-center justify-start gap-2 group/sidebar py-2 text-white hover:text-gray-200`}
+										onClick={() => {}}
+									>
+										<span className="text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0 uppercase font-medium">
+											{label}
+										</span>
+									</Link>
+								</SheetClose>
+							);
+						})}
+					</nav>
+				)}
 			</SheetContent>
 		</Sheet>
 	);

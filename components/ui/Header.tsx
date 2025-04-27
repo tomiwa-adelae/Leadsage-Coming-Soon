@@ -5,7 +5,7 @@ import { navLinks } from "@/constants";
 import { cn } from "@/lib/utils";
 import { MobileNavbar } from "../MobileNavbar";
 
-const Header = () => {
+const Header = ({ links }: { links: boolean }) => {
 	return (
 		<header className="container py-4 flex items-center justify-between gap-4">
 			<Link href={"/"}>
@@ -18,29 +18,31 @@ const Header = () => {
 				/>
 			</Link>
 			<div className="flex-1 md:flex items-center justify-end gap-6">
-				<nav className="hidden md:flex items-center justify-end gap-6">
-					{navLinks.map((link, index) => {
-						return (
-							<Link
-								key={index}
-								className={cn(
-									"uppercase text-xs lg:text-sm font-medium text-white"
-								)}
-								href={link.slug}
-							>
-								{link.label}
-							</Link>
-						);
-					})}
-				</nav>
+				{links && (
+					<nav className="hidden md:flex items-center justify-end gap-6">
+						{navLinks.map((link, index) => {
+							return (
+								<Link
+									key={index}
+									className={cn(
+										"uppercase text-xs lg:text-sm font-medium text-white"
+									)}
+									href={link.slug}
+								>
+									{link.label}
+								</Link>
+							);
+						})}
+					</nav>
+				)}
 				<Button className="hidden md:flex" asChild size={"md"}>
-					<Link href="#waitlist">Join</Link>
+					<Link href="/#waitlist">Join</Link>
 				</Button>
 				<div className="md:hidden flex items-center justify-end gap-2 md:gap-4">
 					<Button asChild size={"md"}>
-						<Link href="#waitlist">Join</Link>
+						<Link href="/#waitlist">Join</Link>
 					</Button>
-					<MobileNavbar />
+					{links && <MobileNavbar links={links} />}
 				</div>
 			</div>
 		</header>

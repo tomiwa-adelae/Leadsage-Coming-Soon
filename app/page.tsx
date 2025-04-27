@@ -3,7 +3,6 @@ import Contact from "@/components/Contact";
 import Countdown from "@/components/Countdown";
 import FAQs from "@/components/FAQs";
 import How from "@/components/How";
-import { ScrollUp } from "@/components/ScrollUp";
 import Showcase from "@/components/Showcase";
 import { Button } from "@/components/ui/button";
 import { ColourfulText } from "@/components/ui/colourful-text";
@@ -32,6 +31,7 @@ const page = () => {
 						</Link>
 					</Button>
 				}
+				links={true}
 			/>
 			<About />
 			<How />
@@ -40,7 +40,6 @@ const page = () => {
 			<Waitlist />
 			<Countdown />
 			<Contact />
-			<ScrollUp />
 		</div>
 	);
 };

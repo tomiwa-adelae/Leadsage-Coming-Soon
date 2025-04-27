@@ -45,7 +45,7 @@ const Footer = () => {
 					</div>
 					{footerDetails.map(({ title, links }, index) => (
 						<div key={index} className="">
-							<h3 className="text-sm font-semibold tracking-wider uppercase">
+							<h3 className="text-sm md:text-base font-semibold tracking-wider uppercase">
 								{title}
 							</h3>
 							<ul className="mt-4 space-y-4">

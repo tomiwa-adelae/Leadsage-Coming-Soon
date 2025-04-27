@@ -6,17 +6,19 @@ const Showcase = ({
 	headline,
 	description,
 	details,
+	links = false,
 }: {
 	headline: React.ReactNode;
 	description: string | React.ReactNode;
 	details?: React.ReactNode;
+	links?: boolean;
 }) => {
 	return (
 		<div
 			style={{ backgroundImage: `url(/assets/images/showcase-img.jpg)` }}
 			className="min-h-[70vh] text-white"
 		>
-			<Header />
+			<Header links={links} />
 			<div className="py-16 flex items-center justify-center">
 				<div className="container grid grid-cols-1 gap-8 md:grid-cols-2">
 					<div className="flex flex-col items-center text-center md:text-left md:items-start w-full justify-center">

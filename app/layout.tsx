@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/ui/Header";
 import { Toaster } from "@/components/ui/toaster";
 import { waitlistWebsiteURL } from "@/constants";
+import { ScrollUp } from "@/components/ScrollUp";
 
 export const metadata: Metadata = {
 	title: "Leadsage Africa - Coming soon",
@@ -51,6 +52,7 @@ export default function RootLayout({
 				{children}
 				<Footer />
 				<Toaster />
+				<ScrollUp />
 			</body>
 		</html>
 	);
