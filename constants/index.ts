@@ -62,7 +62,7 @@ export const how = [
 
 export const twitterURL = "https://x.com/leadsageafrica";
 export const instagramURL = "https://instagram.com/leadsageafrica";
-export const linkedinURL = "https://twitter.com/";
+export const linkedinURL = "https://www.linkedin.com/company/leadsage-africa/";
 
 export const websiteURL = "https://leadsageafrica.com";
 export const email = "info@leadsageafrica.com";
@@ -234,4 +234,4 @@ export const footerDetails = [
 	},
 ];
 
-export const identities = ["Landlord", "Renter", "Agent"];
+export const identities = ["Landlord", "Customers", "Agent", "Shortlet Owners"];
