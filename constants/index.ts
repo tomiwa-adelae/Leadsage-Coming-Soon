@@ -202,7 +202,7 @@ export const footerDetails = [
 		title: "Affiliate",
 		links: [
 			{
-				slug: "",
+				slug: "/affiliates",
 				label: "Affiliate",
 			},
 			{
