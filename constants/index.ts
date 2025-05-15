@@ -65,7 +65,7 @@ export const instagramURL = "https://instagram.com/leadsageafrica";
 export const linkedinURL = "https://twitter.com/";
 
 export const websiteURL = "https://leadsageafrica.com";
-export const email = "leadsageafrica@gmail.com";
+export const email = "info@leadsageafrica.com";
 export const israelNumber = "+234 806 483 9141";
 export const tomiwaNumber = "+234 802 783 6001";
 export const waitlistWebsiteURL = "https://leadsageafrica.com";
