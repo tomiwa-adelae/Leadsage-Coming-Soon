@@ -120,7 +120,7 @@ export function WaitlistForm() {
 					/>
 					<div>
 						<FormLabel>Tell us who you are</FormLabel>
-						<div className="flex items-center justify-between gap-4 mt-4">
+						<div className="flex flex-wrap items-center justify-between gap-4 mt-4">
 							{identities.map((id, index) => (
 								<Button
 									key={index}
