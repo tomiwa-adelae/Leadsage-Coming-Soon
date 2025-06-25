@@ -310,6 +310,124 @@ export const generateAdminContactTemplate = (
       <div class="logo">LeadSage AFRICA - ADMIN</div>
     </div>
     <div class="content">
+      <h2>New Contact Registration</h2>
+      
+      <p>A new user has joined the LeadSage Africa.</p>
+      
+      <div class="user-details">
+        <div class="detail-row">
+          <div class="detail-label">Name:</div>
+          <div>${name}</div>
+        </div>
+        <div class="detail-row">
+          <div class="detail-label">Email:</div>
+          <div>${email}</div>
+        </div>
+        <div class="detail-row">
+          <div class="detail-label">Date/Time:</div>
+          <div>${formatDate(createdDate)}</div>
+        </div>
+      </div>
+      
+      
+      <p>You can respond directly to this user by replying to this email or through the admin dashboard.</p>
+    </div>
+    <div class="footer">
+      <p>© 2025 LeadSage Africa. Internal notification - do not forward.</p>
+      <p>To adjust your notification settings, visit the admin dashboard.</p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+
+export const generateAdminWaitlistTemplate = (
+  name: string,
+  email: string,
+  createdDate: string
+   role: string
+) => `
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Waitlist Registration - LeadSage Africa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .header {
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 3px solid #59B778;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #59B778;
+    }
+    .content {
+      padding: 20px;
+      line-height: 1.5;
+    }
+    .footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      color: #666666;
+      border-top: 1px solid #eeeeee;
+    }
+    .user-details {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 4px;
+      margin: 15px 0;
+    }
+    .detail-row {
+      display: flex;
+      padding: 8px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .detail-label {
+      font-weight: bold;
+      width: 120px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #59B778;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+    .stats {
+      background-color: #e8f5e9;
+      padding: 15px;
+      border-radius: 4px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">LeadSage AFRICA - ADMIN</div>
+    </div>
+    <div class="content">
       <h2>New Waitlist Registration</h2>
       
       <p>A new user has joined the LeadSage Africa waitlist.</p>
@@ -322,6 +440,10 @@ export const generateAdminContactTemplate = (
         <div class="detail-row">
           <div class="detail-label">Email:</div>
           <div>${email}</div>
+        </div>
+        <div class="detail-row">
+          <div class="detail-label">Role:</div>
+          <div>${role}</div>
         </div>
         <div class="detail-row">
           <div class="detail-label">Date/Time:</div>

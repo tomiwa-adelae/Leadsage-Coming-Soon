@@ -3,7 +3,7 @@
 import Mailjet from "node-mailjet";
 import { connectToDatabase } from "../database";
 import Waitlist from "../database/models/waitlist.model";
-import { emailTemplate } from "@/templates";
+import { emailTemplate, generateAdminWaitlistTemplate } from "@/templates";
 
 const mailjet = Mailjet.apiConnect(
 	process.env.MAILJET_API_PUBLIC_KEY!,
@@ -51,12 +51,33 @@ export const register = async (details: {
 					To: [
 						{
 							Email: user.email,
-							Name: user.email,
+							Name: user.name,
 						},
 					],
 					Subject: `You’re officially on the LeadSage Africa waitlist! `,
 					TextPart: `You’re officially on the LeadSage Africa waitlist! `,
 					HTMLPart: emailTemplate(user.name),
+				},
+			],
+		});
+
+		// **Send Confirmation Email to Student**
+		await mailjet.post("send", { version: "v3.1" }).request({
+			Messages: [
+				{
+					From: {
+						Email: process.env.SENDER_EMAIL_ADDRESS!,
+						Name: process.env.COMPANY_NAME!,
+					},
+					To: [
+						{
+							Email: process.env.ADMIN_EMAIL_ADDRESS!,
+							Name: Israel Ibitoye,
+						},
+					],
+					Subject: `New Waitlist Form Submission on the LeadSage Africa!`,
+					TextPart: `New Waitlist Form Submission on the LeadSage Africa! `,
+					HTMLPart: generateAdminWaitlistTemplate(user.name, user?.email, user?.identity),
 				},
 			],
 		});

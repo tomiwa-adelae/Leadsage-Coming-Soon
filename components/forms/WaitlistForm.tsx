@@ -109,7 +109,7 @@ export function WaitlistForm() {
 								<FormControl>
 									<Input
 										type={"email"}
-										placeholder="Your full name"
+										placeholder="Your email"
 										{...field}
 									/>
 								</FormControl>
