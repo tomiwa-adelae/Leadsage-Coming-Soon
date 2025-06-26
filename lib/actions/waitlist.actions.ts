@@ -80,6 +80,7 @@ export const register = async (details: {
 					HTMLPart: generateAdminWaitlistTemplate(
 						user.name,
 						user?.email,
+						user?.createdAt,
 						user?.identity
 					),
 				},
