@@ -79,32 +79,27 @@ export const emailTemplate = (name: string) => `
       <h1>You're on the waitlist</h1>
       <p>Hi ${name},</p>
       <p>
-        Thank you for joining the <strong>LeadSage Africa</strong> waitlist — we're thrilled to have you on board!
+       Thank you for joining the LeadSage Africa waitlist — we’re thrilled to have you on board!
       </p>
       <p>
-        LeadSage Africa is a smarter way to find, book, and manage rental properties. Whether you're a renter or a landlord, we’re building something exciting just for you.
+      At LeadSage Africa, we’re building a smarter, stress-free way to find and rent homes. Say goodbye to agent wahala, upfront year-long payments, and endless house-hunting stress. With verified listings, flexible payment options, and a user-friendly platform, we’re making renting in Nigeria simple, secure, and transparent.
       </p>
+      <p>You're now part of a growing community that believes renting a home should be as easy as clicking a button. As one of our early supporters, you'll be the first to</p>
       <ul>
-        <li>✅ Early access to our platform</li>
-        <li>✅ Be the first to test new features</li>
-        <li>✅ Behind-the-scenes updates on our launch</li>
+        <li>✅ Get early access when we launch</li>
+        <li>✅ Enjoy special waitlist-only benefits</li>
+        <li>✅ Receive updates on new features and progress</li>
       </ul>
 
       <p>
-        We’ll keep you posted as we get closer to launch. Until then, feel free to reply to this email — we’d love to know what brought you here.
+        We’re working hard behind the scenes, and we’ll keep you in the loop every step of the way.If you have any questions or ideas, hit reply—we’d love to hear from you.
       </p>
+
+      <p>Welcome to the future of renting. Welcome to LeadSage Africa.</p>
 
       <a class="btn" href="${websiteURL}" target="_blank">Visit Website</a>
 
-      <div class="footer">
-        <p>Stay connected:</p>
-        <div class="socials">
-          <a href="${twitterURL}" target="_blank">Twitter</a> |
-          <a href="${instagramURL}" target="_blank">Instagram</a> |
-          <a href="${linkedinURL}" target="_blank">LinkedIn</a>
-        </div>
-        <p style="margin-top: 20px;">&copy; 2025 LeadSage Africa. All rights reserved.</p>
-      </div>
+        <p style="margin-top: 20px;">Warm regards,Israel Ibitoye - Founder, LeadSage Africa</p>
     </div>
   </body>
 </html>
@@ -341,12 +336,11 @@ export const generateAdminContactTemplate = (
 </html>
 `;
 
-
 export const generateAdminWaitlistTemplate = (
-  name: string,
-  email: string,
-  createdDate: string
-   role: string
+	name: string,
+	email: string,
+	createdDate: string,
+	role: string
 ) => `
   <!DOCTYPE html>
 <html lang="en">
