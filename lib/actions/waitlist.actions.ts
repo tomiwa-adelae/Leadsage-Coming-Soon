@@ -72,12 +72,16 @@ export const register = async (details: {
 					To: [
 						{
 							Email: process.env.ADMIN_EMAIL_ADDRESS!,
-							Name: Israel Ibitoye,
+							Name: "Israel Ibitoye",
 						},
 					],
 					Subject: `New Waitlist Form Submission on the LeadSage Africa!`,
 					TextPart: `New Waitlist Form Submission on the LeadSage Africa! `,
-					HTMLPart: generateAdminWaitlistTemplate(user.name, user?.email, user?.identity),
+					HTMLPart: generateAdminWaitlistTemplate(
+						user.name,
+						user?.email,
+						user?.identity
+					),
 				},
 			],
 		});
