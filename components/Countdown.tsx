@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 
 const Countdown = () => {
-	const launchDate = new Date("July 16, 2025, 11:00:00").getTime();
+	const launchDate = new Date("October 1, 2025, 11:00:00").getTime();
 
 	const [days, setDays] = useState<any>(0);
 	const [hours, setHours] = useState<any>(0);
