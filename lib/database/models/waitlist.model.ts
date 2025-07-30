@@ -5,6 +5,7 @@ export interface Waitlist extends Document {
 	email: string;
 	name: string;
 	identity: string;
+	phoneNumber?: string;
 }
 
 // Define the Mongoose Schema
