@@ -14,11 +14,23 @@ export const register = async (details: {
 	name: string;
 	email: string;
 	identity: string;
+	phoneNumber: string;
 }) => {
 	try {
 		await connectToDatabase();
 
-		if (!details.email || !details.name || !details.identity)
+		// await Waitlist.updateMany(
+		// 	{ phoneNumber: { $exists: false } },
+		// 	{ $set: { phoneNumber: "" } }
+		// );
+		// console.log("done");
+
+		if (
+			!details.email ||
+			!details.name ||
+			!details.identity ||
+			!details.phoneNumber
+		)
 			return {
 				status: 400,
 				message: "Oops! Please enter all fields.",
@@ -81,7 +93,8 @@ export const register = async (details: {
 						user.name,
 						user?.email,
 						user?.createdAt,
-						user?.identity
+						user?.identity,
+						user?.phoneNumber
 					),
 				},
 			],

@@ -340,7 +340,8 @@ export const generateAdminWaitlistTemplate = (
 	name: string,
 	email: string,
 	createdDate: string,
-	role: string
+	role: string,
+	phoneNumber: string
 ) => `
   <!DOCTYPE html>
 <html lang="en">
@@ -438,6 +439,10 @@ export const generateAdminWaitlistTemplate = (
         <div class="detail-row">
           <div class="detail-label">Role:</div>
           <div>${role}</div>
+        </div>
+        <div class="detail-row">
+          <div class="detail-label">Role:</div>
+          <div>${phoneNumber}</div>
         </div>
         <div class="detail-row">
           <div class="detail-label">Date/Time:</div>

@@ -6,6 +6,7 @@ import { z } from "zod";
 
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
+import * as RPNInput from "react-phone-number-input";
 import {
 	Form,
 	FormControl,
@@ -14,8 +15,12 @@ import {
 	FormLabel,
 	FormMessage,
 } from "@/components/ui/form";
+import {
+	CountrySelect,
+	FlagComponent,
+	PhoneInput,
+} from "@/components/PhoneNumberInput";
 import { Input } from "@/components/ui/input";
-import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { register } from "@/lib/actions/waitlist.actions";
@@ -30,6 +35,9 @@ const FormSchema = z.object({
 	email: z.string().email().min(2, {
 		message: "Email is required.",
 	}),
+	phoneNumber: z.string().regex(/^(\+?\d{10,15})$/, {
+		message: "Enter a valid phone number.",
+	}),
 });
 
 export function WaitlistForm() {
@@ -43,6 +51,7 @@ export function WaitlistForm() {
 		defaultValues: {
 			name: "",
 			email: "",
+			phoneNumber: "",
 		},
 	});
 
@@ -52,6 +61,7 @@ export function WaitlistForm() {
 				name: data.name,
 				email: data.email,
 				identity: identity,
+				phoneNumber: data.phoneNumber,
 			};
 			const res = await register(details);
 
@@ -113,7 +123,30 @@ export function WaitlistForm() {
 										{...field}
 									/>
 								</FormControl>
-
+								<FormMessage />
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
+						name="phoneNumber"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>Phone number</FormLabel>
+								<FormControl>
+									<RPNInput.default
+										className="flex rounded-md shadow-xs"
+										international
+										flagComponent={FlagComponent}
+										countrySelectComponent={CountrySelect}
+										inputComponent={PhoneInput}
+										placeholder="8012345679"
+										value={field.value}
+										onChange={(value) =>
+											field.onChange(value)
+										}
+									/>
+								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}

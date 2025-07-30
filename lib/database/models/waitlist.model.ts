@@ -13,6 +13,7 @@ const WaitlistSchema = new Schema<Waitlist>(
 		email: { type: String, required: true, unique: true },
 		name: { type: String, required: true },
 		identity: { type: String, required: true },
+		phoneNumber: { type: String },
 	},
 	{ timestamps: true }
 );
